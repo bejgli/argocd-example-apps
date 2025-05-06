@@ -17,4 +17,4 @@ spec:
       - image: docker.io/bejgli/oracle-db-test:1.0.0
         name: oracle-db-test
         ports:
-        - containerPort: 80
+        - containerPort: 5000
