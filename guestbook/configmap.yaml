@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bucket-configmap-somebucket
+data:
+  name: "argobucket"
+  compartment_id: "ocid1.tenancy.oc1..aaaaaaaaour4bncy5qvbtjv74iiyvdc6bbibwj6nbdahkyhziez5bqkp45aq"
+  storage_tier: "Archive"
+  namespace: "frcycz1bnkl3"

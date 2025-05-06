@@ -1,0 +1,35 @@
+apiVersion: opentofu.upbound.io/v1beta1
+kind: Workspace
+metadata:
+  name: bucket
+  annotations:
+spec:
+  forProvider:
+    env:
+      - configMapKeyRef:
+          key: name
+          name: bucket-configmap-somebucket
+          namespace: crossplane-system
+        name: TF_VAR_name
+      - configMapKeyRef:
+          key: compartment_id
+          name: bucket-configmap-somebucket
+          namespace: crossplane-system
+        name: TF_VAR_compartment_id
+      - configMapKeyRef:
+          key: namespace
+          name: bucket-configmap-somebucket
+          namespace: crossplane-system
+        name: TF_VAR_namespace
+      - configMapKeyRef:
+          key: storage_tier
+          name: bucket-configmap-somebucket
+          namespace: crossplane-system
+        name: TF_VAR_storage_tier
+    module: git::https://github.com/PZoli98/terraform-modules.git//bucket?ref=main
+    source: Remote
+  providerConfigRef:
+    name: opentofu-providerconfig
+  writeConnectionSecretToRef:
+    namespace: crossplane-system
+    name: bucket-connection
