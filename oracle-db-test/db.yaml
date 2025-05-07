@@ -1,7 +1,7 @@
 apiVersion: opentofu.upbound.io/v1beta1
 kind: Workspace
 metadata:
-  name: autonomousdb
+  name: autonomousdbacloff
   annotations:
 spec:
   forProvider:
