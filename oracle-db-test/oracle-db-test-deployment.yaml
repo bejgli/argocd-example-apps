@@ -18,3 +18,9 @@ spec:
         name: oracle-db-test
         ports:
         - containerPort: 5000
+      env:
+      - name: CONNECTION_STRING
+        valueFrom:
+          secretKeyRef:
+            name: autonomousdb-connection
+            key: high

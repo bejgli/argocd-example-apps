@@ -25,5 +25,5 @@ spec:
   providerConfigRef:
     name: opentofu-providerconfig
   writeConnectionSecretToRef:
-    namespace: crossplane-system
+    namespace: oracle-db-test
     name: autonomousdb-connection
