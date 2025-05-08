@@ -20,7 +20,7 @@ spec:
         value: LICENSE_INCLUDED
       - name: TF_VAR_whitelisted_ips
         value: ['193.68.53.38', '84.206.10.86']
-    module: git::https://@github.com/PZoli98/terraform-modules.git//autonomous_db?ref=main
+    module: git::https://github.com/PZoli98/terraform-modules.git//autonomous_db?ref=main
     source: Remote
   providerConfigRef:
     name: opentofu-providerconfig
