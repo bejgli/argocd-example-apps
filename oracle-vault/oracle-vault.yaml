@@ -1,0 +1,29 @@
+apiVersion: opentofu.upbound.io/v1beta1
+kind: Workspace
+metadata:
+  name: vault
+  annotations:
+spec:
+  forProvider:
+    env:
+      - name: TF_VAR_admin_password
+        value: ValamiNagyonErosPassword12345!
+      - name: TF_VAR_compartment_id
+        value: ocid1.tenancy.oc1..aaaaaaaaour4bncy5qvbtjv74iiyvdc6bbibwj6nbdahkyhziez5bqkp45aq
+      - name: TF_VAR_db_name
+        value: autonomousdb
+      - name: TF_VAR_display_name
+        value: autonomousdb
+      - name: TF_VAR_db_workload
+        value: OLTP
+      - name: TF_VAR_license_model
+        value: LICENSE_INCLUDED
+      - name: TF_VAR_whitelisted_ips
+        value: "[\"127.0.0.1\"]"
+    module: git::https://github.com/PZoli98/terraform-modules.git//autonomous_db?ref=main
+    source: Remote
+  providerConfigRef:
+    name: opentofu-providerconfig
+  writeConnectionSecretToRef:
+    namespace: crossplane-system
+    name: autonomousdb-connection
