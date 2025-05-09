@@ -19,7 +19,7 @@ spec:
       - name: TF_VAR_license_model
         value: LICENSE_INCLUDED
       - name: TF_VAR_whitelisted_ips
-        value: "[\"127.0.0.1\"]"
+        value: "[\"141.147.60.65\"]"
     module: git::https://github.com/PZoli98/terraform-modules.git//autonomous_db?ref=main
     source: Remote
   providerConfigRef:
