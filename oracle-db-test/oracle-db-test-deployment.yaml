@@ -14,7 +14,7 @@ spec:
         app: oracle-db-test
     spec:
       containers:
-      - image: docker.io/bejgli/oracle-db-test:2.0.0
+      - image: docker.io/bejgli/oracle-db-test:1.0.0
         name: oracle-db-test
         ports:
         - containerPort: 5000
