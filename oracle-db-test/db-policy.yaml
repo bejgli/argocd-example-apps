@@ -1,0 +1,20 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: validate-autonomousdb-license-model
+spec:
+  validationFailureAction: enforce
+  rules:
+    - name: allow-only-license-included
+      match:
+        resources:
+          kinds:
+            - opentofu.upbound.io/v1beta1/Workspace
+      validate:
+        message: "Licenses can only be of type LICENSE_INCLUDED"
+        anyPattern:
+          - spec:
+              forProvider:
+                env:
+                  - name: TF_VAR_license_model
+                    value: LICENSE_INCLUDED
