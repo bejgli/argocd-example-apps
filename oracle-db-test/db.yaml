@@ -15,7 +15,7 @@ spec:
       - name: TF_VAR_display_name
         value: autonomousdb
       - name: TF_VAR_db_workload
-        value: APEX
+        value: OLTP
       - name: TF_VAR_license_model
         value: LICENSE_INCLUDED
       - name: TF_VAR_whitelisted_ips
