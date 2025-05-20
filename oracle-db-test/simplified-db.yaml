@@ -9,8 +9,7 @@ spec:
   displayName: simplifieddb
   workload: OLTP
   licenseModel: LICENSE_INCLUDED
-  whitelistedIps:
-    - ocid1.vcn.oc1.eu-frankfurt-1.amaaaaaawaxtm2qa4hvh73v4e4znqmt3xrkuskv6pzxcnf67lcphrlnhve4q
+  whitelistedIps: "[\"ocid1.vcn.oc1.eu-frankfurt-1.amaaaaaawaxtm2qa4hvh73v4e4znqmt3xrkuskv6pzxcnf67lcphrlnhve4q\"]"
   adminPasswordSecretRef:
     name: secret
     key: TF_VAR_admin_password
