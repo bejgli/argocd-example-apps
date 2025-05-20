@@ -3,7 +3,7 @@ kind: AutonomousDatabase
 metadata:
   name: simplified-autonomous-db
 spec:
-  namespace: simplified-db-test
+  namespace: oracle-db-test
   compartmentId: ocid1.tenancy.oc1..aaaaaaaaour4bncy5qvbtjv74iiyvdc6bbibwj6nbdahkyhziez5bqkp45aq
   dbName: simplifieddb
   displayName: simplifieddb
