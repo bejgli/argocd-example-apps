@@ -22,11 +22,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: PZoli98/platform-policies
+          ref: feat/policy-checker
           path: platform-policies
           
       - name: Apply policies
         working-directory: infra/oracle-db-test
         run: |
           for manifest in *.yaml; do
+            echo "------------------------------"
+            echo "Applying to: $manifest"
             kyverno apply ../../platform-policies/* -r "$manifest" -p
           done
