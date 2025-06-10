@@ -21,7 +21,7 @@ jobs:
       - name: Get policies
         uses: actions/checkout@v4
         with:
-          repository: https://github.com/PZoli98/platform-policies.git
+          repository: PZoli98/platform-policies
           path: platform-policies
           
       - name: Apply policies
