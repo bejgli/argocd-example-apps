@@ -28,5 +28,5 @@ jobs:
         working-directory: infra/oracle-db-test
         run: |
           for manifest in *.yaml; do
-            kyverno apply ../../platform-policies/application-policy.yaml -r "$manifest" -p
+            kyverno apply ../../platform-policies/* -r "$manifest" -p
           done
